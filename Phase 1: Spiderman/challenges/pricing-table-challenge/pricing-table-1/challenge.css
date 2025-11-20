@@ -1,0 +1,177 @@
+/* Challenge CSS */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and main background */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.pricing-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Container for the cards */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  /* Ensure alignment for equal height cards */
+  align-items: stretch;
+}
+
+/* Individual Card Styles */
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  /* Add border-color, background-color, transform, and box-shadow to the transition */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 1px solid transparent; /* Default transparent border for all cards */
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column;
+}
+
+/* Hover effect: make the card slightly bigger, add subtle orange background, and an orange border */
+.pricing-card:hover {
+  transform: scale(1.03); /* Makes the card slightly larger */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  background-color: #fffaf0; /* A very light, subtle orange background color on hover */
+  border-color: #ff9800; /* Add the orange border on hover */
+}
+
+/* Highlighted Popular Card - only for positioning the badge */
+.pricing-card.popular {
+  position: relative;
+  /* We removed the default orange border from here, it now behaves like the others by default */
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px; /* Position it above the card slightly */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff9800; /* Orange background */
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Typography and Pricing */
+.pricing-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #333;
+}
+
+.period {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+/* Feature List Styles */
+.features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+  flex-grow: 1; /* Allows the feature lists to fill available space, helping equalize height */
+}
+
+.features li {
+  margin-bottom: 0.75rem;
+  color: #666;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.features li::before {
+  content: "■"; /* Using a square character as a bullet point */
+  position: absolute;
+  left: 0;
+  color: #ff9800; /* Orange color for bullets */
+  font-size: 0.8rem;
+}
+
+/* Button Styles */
+.subscribe-btn {
+  background-color: #ff9800; /* Orange button color */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s ease;
+  margin-top: auto; /* Push button to the bottom of the card */
+}
+
+.subscribe-btn:hover {
+  background-color: #e68900; /* Darker orange on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    margin-bottom: 1.5rem;
+    /* Reset transform and shadow on mobile stack */
+    transform: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    /* Reset hover colors on mobile */
+    background-color: #ffffff !important;
+    border-color: transparent !important;
+  }
+
+  body {
+    padding: 1rem;
+  }
+}

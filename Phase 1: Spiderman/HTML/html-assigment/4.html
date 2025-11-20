@@ -1,0 +1,48 @@
+<!-- 4. Links: external, anchor, nav menu, new tab, download, mailto
+
+1. Create a webpage with the following:  
+   - A paragraph with a link to an external website: *chaicode.com*  
+   - An anchor link that jumps to a specific section of the same page.  
+2. Create a navigation menu with links to three pages: Home, Services, and Contact.  
+3. Add a link that opens in a new tab and another link that downloads a file.  
+4. Create an email link that opens the user's email client.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links and Navigation</title>
+  </head>
+  <body>
+    <h2>Links Demo</h2>
+    <p>
+      Visit
+      <a href="https://chaicode.com" target="blank" rel="noopener"
+        >chaicode.com</a
+      >
+    </p>
+
+    <p><a href="#contact">Jump to Contact Section</a></p>
+
+    <nav aria-label="Primary">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <p>
+      <a href="https://google.com" target="_blank" rel="noopener"
+        >Open in new tab</a
+      >
+      <a href="files/sample.pdf" download>Download Sample PDF</a>
+    </p>
+
+    <p>
+      <a href="mailto:hellow@example.com">Email Us</a>
+    </p>
+
+    <h2 id="contact">Contact Section</h2>
+    <p>Here is the contact section anchor target.</p>
+  </body>
+</html>

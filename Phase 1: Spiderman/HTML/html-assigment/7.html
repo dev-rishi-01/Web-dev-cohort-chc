@@ -1,0 +1,46 @@
+<!-- # 7
+1. Add a phone number field to the form that accepts only numbers. 
+2. Include a `textarea` for additional comments.  
+3. Add validation to ensure the password is at least 8 characters long using the `pattern` attribute.  
+4. Style the form to center it on the page and add a background color.   -->
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    background-color: rgb(192, 206, 168);
+  }
+</style>
+<br />
+<div class="container">
+  <form action="/">
+    <label for="phone">
+      Enter Your Number:
+      <input
+        type="number"
+        name="phone"
+        id="phone"
+        pattern="[0-9]+"
+        minlength="10"
+      />
+      <br />
+      <br />
+      <label for="password"
+        >Enter your password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          pattern=".{8,}"
+          title="Password must be of atleast 8 character long"
+          required
+        />
+      </label>
+      <br /><br />
+      <textarea name="comments" id="comments">Describe your Self</textarea>
+      <br />
+      <button type="submit">Submit</button>
+    </label>
+  </form>
+</div>

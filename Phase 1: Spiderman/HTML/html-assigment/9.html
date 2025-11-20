@@ -1,0 +1,95 @@
+<!-- # 9
+
+1. Embed a video on a webpage with the following:  
+   - Add controls, autoplay, and a poster image.  
+   - Add subtitles using the `<track>` tag.  
+2. Create an audio player with two different audio formats.  
+3. Embed a YouTube video using an `<iframe>`.  
+4. Create a table listing three common video and audio formats, along with their descriptions.   -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video
+    controls
+    autoplay
+    width="300px"
+    height="200px"
+      src="./x2mate.com-TVF's UPSC Aspirants Compilations of all Songs and Shayaris Motivation -(480p).mp4"
+    >
+   <track
+   kind="subtitles"
+   src=""
+   srclang="en"
+   label="English"
+   default >
+</track>
+   </video>
+   <br>
+  <audio controls>
+    <source src="./y2mate.com - Sia  Never Give Up Lion.mp3" type="audio/mpeg">
+    Your browser does not support the HTML5 audio element.
+</audio>
+ <audio controls>
+    <source src="./Y2Mate.is - Youre All I Need To Get By (Duet Version)-virfFCPdgek-160k-1654628467642.ogg" type="audio/ogg">
+    Your browser does not support the HTML5 audio element.
+</audio>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/8ashfLSm3tc?si=ulKTxplwg0hF5gM6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Format Type</th>
+        <th>Format</th>
+        <th>Description</th>
+    </tr>
+
+    <!-- Video Formats -->
+    <tr>
+        <td>Video</td>
+        <td>MP4 (H.264)</td>
+        <td>Most widely supported video format; good quality with small file size; works on all major browsers.</td>
+    </tr>
+    <tr>
+        <td>Video</td>
+        <td>WebM</td>
+        <td>Open-source format designed for the web; efficient compression; supported by modern browsers.</td>
+    </tr>
+    <tr>
+        <td>Video</td>
+        <td>OGV (Ogg Video)</td>
+        <td>Open, royalty-free video format; supported by many HTML5 video players.</td>
+    </tr>
+
+    <!-- Audio Formats -->
+    <tr>
+        <td>Audio</td>
+        <td>MP3</td>
+        <td>Most popular audio format; excellent compression and universal browser support.</td>
+    </tr>
+    <tr>
+        <td>Audio</td>
+        <td>OGG Vorbis</td>
+        <td>Open-source, high-quality audio format and a common alternative to MP3.</td>
+    </tr>
+    <tr>
+        <td>Audio</td>
+        <td>WAV</td>
+        <td>Uncompressed, high-quality audio; large file sizes but widely supported on the web.</td>
+    </tr>
+</table>
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

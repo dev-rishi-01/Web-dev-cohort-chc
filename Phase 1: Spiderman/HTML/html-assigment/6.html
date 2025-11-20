@@ -1,0 +1,118 @@
+<!-- # 6
+1. Create a table with three columns: "City", "Country", and "Population". Add three rows of data.  
+tr - stands for table row
+th - stands for table headeer
+td - stands for table data
+-->
+<style>
+  table,
+  th,
+  td {
+    border: 2px solid rgb(172, 165, 165);
+    border-collapse: collapse;
+    padding: 2px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+</style>
+<table width="80%">
+  <tr>
+    <th>City</th>
+    <th>Country</th>
+    <th>Population</th>
+  </tr>
+  <tr>
+    <td>London</td>
+    <td>United Kingdom</td>
+    <td>9,841,000 (metro)</td>
+  </tr>
+  <tr>
+    <td>Mumbai</td>
+    <td>Bharat</td>
+    <td>22,089,000 (metro)</td>
+  </tr>
+  <tr>
+    <td>New York</td>
+    <td>United States</td>
+    <td>19,154,000 (metro)</td>
+  </tr>
+</table>
+<br />
+<!-- 2. Create a table with a caption that lists your favorite foods and their respective categories.   -->
+
+<table width="80%">
+  <tr>
+    <th>Favorite Food</th>
+    <th>Categories</th>
+  </tr>
+  <tr>
+    <td>Masala Dosa</td>
+    <td>Breakfast</td>
+  </tr>
+  <tr>
+    <td>Chapati Bhaji</td>
+    <td>Lunch</td>
+  </tr>
+</table>
+
+<!-- 3. Use `colspan` and `rowspan` to create a complex table layout for a weekly schedule.  -->
+<br />
+<table width="100%">
+  <tr>
+    <th>Day/Period</th>
+    <th>7:00 - 8:00 am</th>
+    <th>8:00 - 9:00 am</th>
+    <th>9:00 - 10:00 am</th>
+    <th>10:00 - 11:00 am</th>
+    <th>11:00 - 12:00 am</th>
+    <th>12:00 - 13:00 am</th>
+    <th>13:00 - 14:00 am</th>
+  </tr>
+  <tr>
+    <th>Monday</th>
+    <td>English</td>
+    <td>Maths</td>
+    <td>Chemistry</td>
+    <td rowspan="6">Lunch</td>
+    <td colspan="3">LAB</td>
+  </tr>
+  <tr>
+    <th>Tuesday</th>
+    <td colspan="3">LAB</td>
+    <td>English</td>
+    <td>Maths</td>
+    <td>Sports</td>
+  </tr>
+  <tr>
+    <th>Wedenesday</th>
+    <td>Maths</td>
+    <td>Physics</td>
+    <td>English</td>
+    <td>Chemistry</td>
+    <td colspan="2">Library</td>
+  </tr>
+  <tr>
+    <th>Thursday</th>
+    <td>Sports</td>
+    <td>Maths</td>
+    <td>Chemistry</td>
+    <td colspan="2">LAB</td>
+    <td>Maths</td>
+  </tr>
+  <tr>
+    <th>Friday</th>
+    <td>Biology</td>
+    <td>Maths</td>
+    <td>Chemistry</td>
+    <td>Marathi</td>
+    <td colspan="2">LAB</td>
+  </tr>
+  <tr>
+    <th>Saturday</th>
+    <td>Computer LAB</td>
+    <td>Hindi</td>
+    <td>Sanskrit</td>
+    <td>Maths</td>
+    <td colspan="2">Sports</td>
+  </tr>
+</table>

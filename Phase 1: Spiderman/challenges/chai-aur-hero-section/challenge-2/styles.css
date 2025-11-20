@@ -1,0 +1,277 @@
+:root {
+  --primary-blue: #3b82f6;
+  --primary-blue-dark: #2563eb;
+  --gray-800: #1f2937;
+  --neutral-400: #9ca3af;
+  --neutral-900: #111827;
+
+  /* Light mode variables (New defaults for white background) */
+  --bg-light: #ffffff;
+  --text-light: #1f2937; /* Gray 800 for text */
+  --border-light: #d1d5db; /* Light gray border */
+  --input-bg: #f9fafb; /* Lighter input background */
+  --input-border: #e5e7eb;
+  --placeholder-color: #9ca3af;
+  --text-color: var(--text-light);
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure background covers the entire page viewport with a white background */
+html {
+  background: var(--bg-light);
+}
+
+body {
+  font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 4rem; /* Space for the toggle button */
+}
+
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.content-col h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  max-width: 700px;
+  color: var(--gray-800);
+}
+
+.content-col p {
+  font-size: 1.125rem;
+  color: var(--neutral-400);
+  margin-bottom: 2rem;
+  max-width: 550px;
+  opacity: 1; /* Full opacity for readability on white background */
+}
+
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.input-wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.demo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.demo-button:hover {
+  background: linear-gradient(135deg, var(--primary-blue-dark), #1d4ed8);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.brands-section {
+  margin-top: 3rem;
+}
+
+.trusted-by {
+  display: block;
+  color: var(--neutral-400);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.brand-logos {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.brand-logo {
+  fill: var(--gray-800);
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .content-col h1 {
+    font-size: 3rem;
+  }
+
+  .cta-group {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .demo-button {
+    width: auto;
+  }
+
+  .input-wrapper {
+    min-width: 250px;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-col h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero-grid {
+    flex-direction: row;
+    gap: 4rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .content-col h1 {
+    font-size: 4rem;
+    max-width: none;
+  }
+
+  .cta-group {
+    justify-content: flex-start;
+  }
+
+  .brands-section {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .brand-logos {
+    justify-content: flex-start;
+  }
+
+  .image-col {
+    justify-content: flex-end;
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-grid {
+    gap: 3rem;
+  }
+}
+
+/* Dark mode toggle specific styles (Now blue) */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  /* Updated to use blue styles */
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+  color: white;
+  border: none; /* Remove border when it's a solid blue button */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: linear-gradient(135deg, var(--primary-blue-dark), #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.5);
+}
+
+/* Styles for when body has 'dark' class (if you implement JS toggle functionality) */
+body.dark {
+  --bg-light: #111827;
+  --text-light: #ffffff;
+  --border-light: #374151;
+  --input-bg: rgba(255, 255, 255, 0.1);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --text-color: var(--text-light);
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1; /* Firefox compatibility */
+}

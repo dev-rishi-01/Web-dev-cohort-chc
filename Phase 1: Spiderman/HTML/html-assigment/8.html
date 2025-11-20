@@ -1,0 +1,140 @@
+<!-- 
+# 8
+1. Create a simple webpage with the following sections:  
+   - Header with a title and navigation menu.  
+   - Main content with a section and an article.  
+   - Sidebar using `<aside>` for related links.  
+   - Footer with copyright information.  
+2. Use the `aria-label` attribute to improve accessibility in your navigation menu.  
+3. Create a blog post layout using semantic elements such as `<article>`, `<header>`, and `<footer>`.   -->
+
+<!-- 
+header with nav bar
+main with section and article
+side bar
+footer with copyright infor  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Blog</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      header {
+        color: #ffffff;
+        padding: 1em;
+        background-color: #333;
+      }
+
+      nav {
+        background-color: #444;
+        padding: 0.5em;
+      }
+
+      nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 1em;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1em;
+        padding: 1em;
+      }
+      footer {
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+        padding: 1em;
+      }
+
+      article,
+      aside {
+        border: 1px solid #ccc;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with a title and navigation menu -->
+    <header>
+      <h2>Blog Title</h2>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main content area using Grid -->
+
+    <main>
+      <section>
+        <h2>Recent Posts</h2>
+        <!-- Blog post using semantic elements -->
+
+        <article>
+          <header>
+            <h3>Blog name</h3>
+            <p><time datetime="2025-20-11">20th November 2025</time></p>
+          </header>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+            atque perspiciatis impedit accusamus. Aliquam porro sit recusandae
+            maxime? Adipisci, culpa.
+          </p>
+          <footer>
+            <p>Posted By: Author Name</p>
+          </footer>
+        </article>
+
+        <!-- A second example article -->
+
+        <article>
+          <header>
+            <h3>Blog name</h3>
+            <p><time datetime="2025-20-11">20th November 2025</time></p>
+          </header>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+            atque perspiciatis impedit accusamus. Aliquam porro sit recusandae
+            maxime? Adipisci, culpa.
+          </p>
+          <footer>
+            <p>Posted By: Author Name</p>
+          </footer>
+        </article>
+      </section>
+      <!-- Sidebar for related links -->
+
+      <aside>
+        <h3>Related Links</h3>
+        <ul>
+          <li><a href="#">Article-1 </a></li>
+          <li><a href="#">Article-2 </a></li>
+          <li><a href="#">Article-3 </a></li>
+        </ul>
+      </aside>
+    </main>
+    <!-- Footer with copyright information -->
+
+    <footer>&copy; 2025 My Blog. All rights are reserved.</footer>
+  </body>
+</html>

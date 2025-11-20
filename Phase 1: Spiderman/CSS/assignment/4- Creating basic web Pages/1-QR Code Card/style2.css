@@ -1,0 +1,35 @@
+
+
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #E2EBF7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #334363;
+    cursor: pointer;
+}
+
+.qr-card-container{
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.qr-code-section{
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    background-color: #d8c3e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
