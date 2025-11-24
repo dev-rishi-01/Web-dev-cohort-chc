@@ -1,3 +1,8 @@
+// Read and learn about - 
+// 1- ProtoTypes
+// 2- Proto Chaining 
+// 3- Objects
+
 // Objects - helps us represent real world entities
 // Eg: a remote , mouse or keyboard ( color, type of keyboard, brand, price , weight,etc)
 // Object is a entities which has properties and some functionality.
@@ -38,8 +43,12 @@
 // console.log(obj1.getFullname());
 // console.log(obj2.getFullname());
 
-// 2- Class
+// 2- Class:
+// We can construct Object in JS through contructor
 // Constructor -
+
+// Default contructor : 
+// Param Constructor: 
 class Person {
   constructor(fname, lname) {
     this.fname = fname;
@@ -49,7 +58,7 @@ class Person {
     return `${this.fname} ${this.lname} `;
   }
 }
-
+// p1 and p2 are objects
 const p1 = new Person("Piyush", "Garg");
 const p2 = new Person("Akash", "Kadlag");
 
